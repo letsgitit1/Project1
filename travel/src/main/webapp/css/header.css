@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+	transform: translate(0px, 110px);
+    margin-bottom: 40px;
+}
+header {
+      width: 100%;
+    height: 110px;
+    display: flex;
+    position: flex;
+    top:0;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+#main_header_logo {
+  display: flex;
+}
+#main_header_img {
+ background-image: url(../img/main_hader_logo.png);
+    background-size: contain;
+    width: 150px;
+    height: 62px;
+    background-repeat: no-repeat;
+    transform: translate(25px, 30px);
+}
+
+#main_header_title {
+  color: rgba(45, 182, 191);
+  font-size: 30px;
+  font-weight: bold;
+}
+#hader_search_bar {
+  margin: 0 auto;
+  width: 300px;
+  height: 50px;
+}
+.container_1 {
+  width: 700px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  right: 40%;
+  bottom: 60px;
+}
+.container_1 input#search {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  padding-left: 32px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 30px;
+  border: 2px solid rgb(95 177 183);
+}
+.container_1 {
+  position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+}
+.container_1 input#search:hover,
+.container-1 input#search:focus,
+.container-1 input#search:active {
+  outline: none;
+  background: rgb(233 253 255);
+  box-shadow: 3px 3px 3px 3px grey;
+}
+#main_header_info {
+  width: 350px;
+  height: 65px;
+  display: flex;
+}
+.main_header_info_icon {
+  margin: 18px 25px;
+}
+#main_header_info > a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+#info_icon1 {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/white-house-icon-png-4.jpg);
+}
+#info_icon2{
+	width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/more-icon.png);
+}
+#info_icon3 {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/mypage.png);
+}
+#info_icon4 {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/1-login.png);
+}
+#info_icon5 {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/logout.png);
+}
+#Log_out_icon {
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/logout.png);
+}
+#main_header_info_text {
+  margin-bottom: 5px;
+}

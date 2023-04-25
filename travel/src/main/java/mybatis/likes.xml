@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="likesVo">
+    <select id="wishlist" resultType="vo.likesVo" parameterType="String">
+        SELECT 
+        	p.PNAME 		as pname
+        	, p.pno			as pno
+        	, p.PRICE 		as price 
+        	, p.PHOTOFILE 	as photofiles
+        	, p.RCOUNT 		as rcount
+        	, p.PCATEGORY 	as category
+		FROM likes l
+		JOIN PRODUCT p 
+		ON p.pno = l.pno
+		AND l.mno = #{mno}
+    </select>
+    
+    <select id="heart" parameterType="java.util.Map" resultType="int">
+    	SELECT COUNT(pno) FROM likes
+		WHERE mno = #{mno} 
+		AND pno = #{pno}
+    </select>
+    
+    
+    <insert id="insert" parameterType="java.util.Map">
+    	INSERT INTO likes (lno, mno, pno)
+		VALUES (likes_seq.nextval, #{mno}, #{pno})
+    </insert>
+    
+    <delete id="delete" parameterType="java.util.Map">
+    	DELETE FROM likes 
+		WHERE pno = #{pno}
+		AND mno = #{mno}
+    </delete>
+    <!-- 유저가 찜한 숙소개수(paging) -->
+    <select id="getCount" parameterType="String" resultType="int">
+       SELECT COUNT(lno) FROM likes WHERE mno = #{id}
+    </select>
+    
+    <!-- 보여질 찜 목록 -->
+    <select id="showHeart" parameterType="java.util.Map" resultType="vo.likesVo">
+      SELECT 
+           p.PNAME       as pname
+           , p.pno         as pno
+           , p.PRICE       as price 
+           , p.PHOTOFILE    as photofiles
+           , p.RCOUNT       as rcount
+           , p.PCATEGORY    as category 
+        FROM
+         (SELECT rownum r, l.*from
+            (SELECT * FROM likes WHERE mno = #{id}) l) li
+      JOIN PRODUCT p
+      ON p.PNO = li.pno
+      AND r BETWEEN #{start} AND #{end}
+    </select>
+</mapper>
+

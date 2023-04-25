@@ -1,0 +1,239 @@
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+#list_nav {
+  width: 1200px;
+  	margin:0 auto;
+ font-family: 'Noto Sans KR', sans-serif;
+    z-index: 998;
+    position:relative;
+}
+.menu {
+
+      width: 1200px;
+    color: #000;
+    margin-bottom: 40px;
+    transform: translate(35px, 10px);
+}
+#nav_icon {
+  font-size: 2.2em;
+  cursor: pointer;
+  transition: all 0.5s;
+  transform: translate(20px, 10px);
+}
+.nav_main_menu {
+  font-size: 2.2em;
+}
+nav .menu-item {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+nav .sub-menu {
+  width: 200px;
+  font-size:25px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  color: #000;
+    background-color:white;
+    border-radius: 10px 0px 0px 10px;
+    opacity:0.8;
+    
+}
+
+nav .menu-item:hover > .sub-menu {
+  display: block;
+}
+
+nav .sub-menu-item {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+nav .sub-menu-item:hover{
+	background-color:rgb(167,165,165,0.8);
+}
+nav .sub-menu .sub-sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  height:100%;
+  background-color:white;
+  border-radius: 0px 10px 10px 0px;
+}
+.sub-sub-menu {
+	 font-size:25px;
+  width: 100%;
+  height: 200px;
+  color: #000;
+}
+
+nav .sub-menu-item:hover > .sub-sub-menu {
+  display: block;
+}
+
+
+nav .sub-sub-menu-item {
+  display: block;
+  
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+/*nav css끝*/
+#list_main_product{
+	width:1200px;
+	margin:0 auto;
+font-family: 'Nanum Gothic', sans-serif;
+
+
+	
+}
+.list_item{
+	float: left;
+	    margin: 5px 20px;
+	    
+}
+#list_product_img{
+	position:relative;
+	
+}
+#list_product_img a{
+	text-decoration:none;
+}
+#list_product_img>a>img{
+	opacity:0.9;
+	border-radius:20px;
+}
+#main_product_text{
+	width:100%;
+}
+#main_product_text_title{
+	color:#fff;
+	font-weight:bold;
+	font-size:28px;
+	  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#main_product_detail{
+	position:absolute;
+	top: 20px;
+    left: 30px;
+}
+#main_product_detail p:nth-child(2){
+	color:rgb(255,139,32);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	font-size:24px;
+}
+#main_product_detail p:nth-child(3){
+	color:#fff;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	font-size:20px;
+}
+#main_product_price{
+	position:absolute;
+	bottom:32px;
+    right: 25px;
+	font-size:24px;
+	color:#fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#main_product_etc_area1{
+	position: absolute;
+    display: flex;
+        bottom: 30px;
+      right: 150px;
+    width:160px;
+}
+#main_product_etc_area1 div:first-child{
+	width:100px;
+	height:30px;
+	background-color:rgb(167,165,165);
+}
+#main_sub_address{
+	font-size:20px;
+}
+#menu_category{
+	width:105%;
+	display:flex;
+	cursor:pointer;
+	padding-bottom:15px;
+	border-bottom:2px solid black;
+}
+#main_sub_address{
+	    margin-left: 40px;
+    margin-top: 10px;
+}
+#main_product_etc_area1 div:first-child>p{
+	font-size:12px;
+  text-align: center;
+  color:#fff;
+  transform: translate(0px, 7px);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#main_product_etc_area1 div:nth-child(2){
+	width:70px;
+	height:30px;
+	text-align:center;
+	background-color:rgb(255,123,123);
+}
+
+#main_product_etc_area1 div:nth-child(2)>p{
+	color:#fff;
+		font-weight:bold;
+	transform: translate(0px, 5px);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#main_product_etc_area2{
+	bottom: 80px;
+	display: flex;
+    right: 150px;
+	position:absolute;
+	width:160px;
+}
+#main_product_etc_area2 div:first-child{
+	width:100px;
+	height:30px;
+	background-color:rgb(167,165,165);
+}
+#main_product_etc_area2 div:first-child>p{
+	font-size:14px;
+  text-align: center;
+  color:#fff;
+  transform: translate(0px, 7px);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#main_product_etc_area2 div:nth-child(2){
+	width:70px;
+	height:30px;
+	text-align:center;
+	background-color:rgb(255,123,123);
+}
+
+#main_product_etc_area2 div:nth-child(2)>p{
+	color:#fff;
+		font-weight:bold;
+	transform: translate(0px, 5px);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#main_product_price2{
+	position:absolute;
+	bottom: 80px;
+    right: 25px;
+	font-size:24px;
+	color:#fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+

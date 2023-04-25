@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="payment">
+	<insert id="paymentinfo" parameterType="vo.PaymentVo">
+		INSERT INTO PAYMENT
+		(ORDERID, MID, PNO, PAYMETHOD, AMOUNT, APPROVEDAT, CHECKIN, CHECKOUT)
+		VALUES(#{orderid}, #{mid}, #{pno}, #{paymethod}, #{amount},
+		#{approvedAt}, #{checkin}, #{checkout})
+
+	</insert>
+	<select id="selectmid" resultType="vo.PaymentVo" parameterType="String">
+	SELECT * FROM PAYMENT a JOIN PRODUCT b ON a.pno=b.PNO AND mid=#{mid}
+	</select>
+</mapper> 

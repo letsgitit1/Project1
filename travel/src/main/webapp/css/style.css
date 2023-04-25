@@ -1,0 +1,383 @@
+@font-face {
+  font-family:"weniv" ;
+  src: url(./SpoqaHanSansNeo_OTF_original/SpoqaHanSansNeo-Medium.otf);
+
+  font-family:"weniv2";
+  src: url(./SpoqaHanSansNeo_OTF_original/SpoqaHanSansNeo-Regular.otf); ;
+}
+
+body.modal-open {
+   background: #eee;
+}
+
+ html body {
+  font-family: 'weniv2';
+  font-weight: 500;  
+} 
+button {
+  cursor: pointer;
+}
+
+a{
+   text-decoration:none;
+}
+
+
+h3 {
+    text-align: center;
+     color: rgb(60, 60, 60);
+     margin-bottom: 20px;
+}
+
+ #app {
+ background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  border: 1px solid #C4C4C4;
+  border-radius:10px ;
+  padding-bottom: 14px;
+  margin-top: 20px;
+} 
+.top-close {  
+  position: relative;
+  /* width: 520px ; */
+  height: 58px;
+  
+}
+.top-close .top-txt {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px 0px 20px 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.top-close::after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;  
+  content: "";
+  display: inline-block;
+  border-bottom: 1px solid #C4C4C4 ;
+
+}
+
+.top-close .close {
+  display: flex;  
+  align-items: flex-end;
+  justify-content: center;
+  top: 22px;
+  right: 24px;
+  position: absolute;
+  overflow: hidden;
+  width: 19px;
+  height: 19px;   
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.top-close .close img {
+  position: absolute;
+  top: 0;
+}
+.user-input {
+  display: flex;
+  flex-direction: column;  
+  padding:0 24px ;
+  background: white;
+}
+.user-input .msg {
+  font-size: 20px;  
+  font-weight: bold;  
+  padding: 27px 0 25px 0 ;
+}
+ .user-input .inp-id, .user-input .inp-pw  {
+  font-size: 16px ;
+  width: 470px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  box-sizing: border-box;
+} 
+.user-input .inp-id {
+  margin-bottom:10px ;
+}
+.user-input .inp-pw {
+  margin-bottom:16px ;
+}
+.user-input .check-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 21px;
+  width: 520px;
+}
+.keep-txt {
+  color: #767676;
+  font-size: 16px ;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+/* 체크박스 */
+
+input[type='checkbox']{
+  display: none;
+}
+ input[type="checkbox"] + label {
+  display: inline-block;
+  width: 22px;
+  height: 22px;  
+  border: 1px solid #767676;
+  cursor: pointer;
+  border-radius: 100%;  
+  background: url(./img/Vector.png) no-repeat;
+  background-position:center; 
+  position: relative;
+  overflow: hidden;
+}
+input[id="check"]:checked + label::before {  
+  content: '';
+  display: block;
+  transform: translate(-15%,-14%);
+  width: 142%;
+  height: 131%;
+  border: none;
+  background: url(./img/2021-11-12\ 195930.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+} 
+
+/* 체크박스 */
+
+.log-btn {
+  font-size: 16px;
+  font-weight: 700;
+padding: 13px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(0, 149, 255);
+  color: #FFF;
+  cursor: pointer;
+}
+.join-find {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+  overflow: hidden; 
+  font-family: "weniv";
+}
+.join-find a {
+  color: #767676;
+}
+.user-join::after {
+  float: right;
+  content: "";
+  top: 1px;
+  width: 1px;
+  height: 14px;
+  background-color: black;
+  margin:0 12px ;
+} 
+.log-other {
+  color: #767676;
+  font-size: 14px;
+  text-align: center;  
+  font-family: "weniv"; 
+}
+
+.log-other::after ,.log-other::before {
+  content: "";
+  float: right;
+  width: 210px;
+  height: 2px;
+  margin-top: 7px;
+  margin-bottom: 29px;
+  background: url(../img/bb.png);  
+}
+.log-other::after {
+  background: url(../img/bb.png); 
+  float: right;
+}
+
+.log-other::before { 
+  float: left; 
+  background: url(../img/bb.png);
+}
+.other-btn {
+  display:flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.other-btn .btn{
+  position: relative;
+  font-size: 16px;
+  width: 472px;    
+  height: 45px;
+  color: #767676;
+  font-weight: 600;
+  margin-bottom: 8px;
+  border-radius: 5px;  
+  border: 1px solid #767676;
+}
+
+.other-btn .log-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;  
+  text-align:center ;  
+  vertical-align: middle;
+  
+  
+}
+.other-btn img {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  margin-left: 12px ;  
+}
+.other-btn .glg {
+  border-color: #767676 ;
+}
+
+.other-btn .face{
+  border-color: #2D9CDB;
+  
+}
+.other-btn .naver{
+  border-color: #00BF18;
+  
+}
+.other-btn .kao{
+  border-color:#F2C94C;
+  
+}
+  
+   #app{
+     width:360px ;
+     margin: 0 auto;
+  }  
+  .top-close {
+    width:100%;
+    height:40px ;
+  }
+  .top-close .top-txt {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    left: 0;
+    font-size:17px ;
+    font-weight: 600; 
+    line-height: 2px;
+    text-align: center;   
+    
+  }
+  .top-close .close {
+    top: 50%;
+    transform: translateY(-23%);
+
+  }
+  .top-close .close img {
+    width: 10px;
+    height: 10px;
+  }
+  .user-input .msg {
+    font-size: 14px;
+    padding: 15px 0 20px 0;
+    text-align: center;
+  }
+  .user-input .inp-id, .user-input .inp-pw {
+    width: 100%;
+    height: 35px;
+    font-size: 13px;
+    
+  }
+  .user-input .inp-pw {
+    margin-bottom:10px ;
+  }
+  .user-input .check-wrap {  
+    width: 100%;
+    justify-content: center;
+    margin-bottom:10px ;  
+  }
+  .keep-txt {
+    font-size: 12px;
+    
+  }
+  .user-input .log-btn {
+    height: 35px;
+    margin-bottom: 15px;
+    padding: 0px 10px;
+    font-size:16px ;
+  }
+  .join-find {
+    margin-bottom: 20px;
+  }
+/*   .log-other::after, .log-other::before {
+    width: 100px;
+    margin-bottom: 22px;
+  }
+  .log-other{
+    font-size: 12px;
+  } */
+  .other-log{
+    width: 100%;
+   
+  }
+  .other-btn {
+    padding: 0 24px;
+    
+  }
+  .other-btn .btn {
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+    height: 35px;
+    margin: 0 24px 10px 24px;
+    text-align: center;    
+  }
+  /* 체크박스 */
+  input[type="checkbox"] + label {
+    width: 15px;
+    height: 15px;
+    background-size: 8px;
+  }
+  input[id="check"]:checked + label::before {
+    width: 150%;
+    height: 130%;
+  }
+.modal-content{
+      position: absolute;
+    top: 255px;
+    left: 50%;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+}
+.close{
+    border: white;
+   background-color: white;
+   position: absolute;
+    top: 24px;
+    right: 9px;
+    font-size: 40px;
+}
+.modal-title{
+       text-decoration: none;
+    font-size: 28px;
+    list-style: nono;
+    color: rgb(60, 60, 60);
+    text-align: center;
+    margin: 30px 40px;
+}

@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author moonn
+ *
+ */
+module test {
+}

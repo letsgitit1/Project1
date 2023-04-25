@@ -1,0 +1,171 @@
+.reservation-form {
+	width:1440px;
+	margin:0 auto;
+	text-align: center;
+	position:relative;
+	top: 150px;
+}
+
+#check_pay {
+	margin-bottom:40px;
+}
+
+.reservation-details {
+	  float: right;
+    position: relative;
+    bottom: 575px;
+    left: 54px;
+    width: 400px;
+    margin-left: 500px;
+    border: none;
+    height: 600px;
+    border-radius: 20px;
+        background-color: #6ed4ff26;
+}
+#reservation_detail_img >img{
+       overflow: hidden;
+    width: 40%;
+    height: 150px;
+    border-radius: 18%;
+    position: absolute;
+    left: 0;
+    margin: 15px;
+    top: 10px;
+    object-fit: cover;
+  }
+
+#reservation_detail_text{
+	    border-top: 1px solid #ccc;
+    width: 370px;
+    position: absolute;
+    top: 52%;
+    margin-top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid #ccc;
+}	 
+.customer-info>h3 {
+	margin:10px 0px;
+}
+.ddd:first-child{
+	    margin-top: 20px;
+}
+.customer-info>input {
+	width:500px;
+	height:50px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	margin:15px;
+	padding-left: 15px;
+}
+#check_in_date, #check_out_date, #check_nights,#total_price{
+	font-size:20px;
+	font-weight:bold;
+}
+#total_price{
+	    color: rgb(0 149 255);
+    font-size: 26px;
+    transform: translateY(15px);
+}
+#reservation-name{
+    color: rgb(113, 113, 113);
+    text-align: center;
+    transform: translate(180px, 30px);
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap;
+    }
+    #reservation-name>p:nth-child(1){
+    	width:70px;
+    }
+    #reservation-name>p:nth-child(2){
+    	    color: black;
+    width: 200px;
+    margin-top: 10px;
+    text-align: left;
+    }
+    .ddd{
+    	margin:10px;
+    }
+    .sss{
+    	color:#838383;
+    }
+#phone {
+	margin-bottom:40px;
+}
+
+.payment_bottom {
+	margin:20px;
+}
+.payment-method{
+	position:absolute;
+	transform: translate(50px, 50px);
+    left: 525px;
+}
+#payment-button {
+	margin-top: 40px;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+	border: none;
+}
+#payment-button:hover{
+	background-color:#3c9ac2d9;
+	color:white;
+}
+#city {
+	border-radius:10px;
+	border:1px solid #ccc;
+	width: 300px;
+	height: 50px
+}
+#reservation_price{
+	    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translate(-50%, 30%);
+}
+
+/*예약 날짜*/
+.reservation-date {
+	margin: 40px 0px;
+	border-bottom: 1px solid #ccc;
+	padding: 40px;
+	width: 735px;
+	margin: 0 auto;
+}
+
+.reservation-date input[type="text"] {
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	width: 180px;
+	transition: all 0.3s ease-in-out;
+	margin: 20px 0px;
+}
+
+.reservation-date input[type="text"]:focus {
+	width: 250px;
+}
+
+.reservation-date input[type="date"] {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 999;
+	display: none;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-top: none;
+}
+.check_date{
+	margin:20px;
+}
+.reservation-date input[type="text"]:focus + input[type="date"] {
+	display: block;
+}
+

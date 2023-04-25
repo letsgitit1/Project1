@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="member" >
+ 	<select id="selectmember" resultType="vo.MemberVo" parameterType="int">
+ 	 select * from member where mno=#{mno}
+ 	</select>
+ 	
+ 	<select id="seletmemberByid" resultType="vo.MemberVo" parameterType="String">
+ 		select * from member where id=#{id}
+ 	</select>
+ 	
+ 	
+ 	<select id="login" resultType="int" parameterType="java.util.Map" >
+ 		select count(*) from member where id=#{id} and pw=#{pw}
+ 	</select>
+ 		<insert id="insert" parameterType="vo.MemberVo" >
+   INSERT INTO member
+      (mno,id,pw,name,phone,gender)
+      VALUES 
+         (member_seq.nextval,#{id},#{pw},#{name},#{phone},#{gender})
+</insert>
+<select id="checkId" parameterType="string" resultType="int">
+select count(mno) from member where id = #{val}
+</select>
+<select id="login2" parameterType="map" resultType="vo.MemberVo">
+      SELECT 
+         ID, NAME, pw
+      FROM 
+         MEMBER2
+      WHERE
+         id = #{id} AND pw = #{pw}
+   </select>
+ 	<insert id="join" parameterType="vo.MemberVo">
+      INSERT INTO MEMBER2
+         (mno,id, name, pw)
+      VALUES
+         (member_seq.nextval,#{id}, #{name}, #{pw})
+   </insert>
+ 
+ 
+  <update id="updateMember" parameterType="java.util.Map">
+      UPDATE member SET pw = #{pw}
+      WHERE id = #{id}
+   </update>
+   
+   
+  <update id="updateMember2" parameterType="java.util.Map">
+      UPDATE member SET pw = #{pw}
+      WHERE pw = '1234'
+   </update>
+   <delete id="delete" parameterType="String">
+       delete from member where id = #{id}
+    </delete>
+ </mapper>

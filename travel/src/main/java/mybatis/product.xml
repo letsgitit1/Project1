@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+<select id="selectPno" parameterType="int" resultType="vo.ProductVo">
+	select * from product where pno=#{pno}
+</select>
+   <select id="selectPcategory" parameterType="String" resultType="vo.ProductVo">
+      select * from product where pcategory=#{pcategory}
+   </select>
+   <select id="searchPcategory" parameterType="String" resultType="vo.ProductVo">
+      select * from product 
+      where pcategory=#{pcategory} and address = #{address} and subaddress = #{subaddress}
+   </select>
+   
+   <!-- 카테고리 총갯수를 확인하기 위한 쿼리문 -->
+   <select id="count" parameterType="String" resultType="int">
+      select count(*) from product where pcategory = #{pcategory}
+   </select>
+   
+   <!-- 네비를 사용하여 총갯수를 확인하기 위한 쿼리문 -->
+   <select id="searchCount" parameterType="String" resultType="int">
+      select count(*) from product where pcategory=#{pcategory}
+      and address = #{address} and subaddress = #{subaddress}
+   </select>
+   
+   <!-- 카테고리검색을 위한 쿼리문 -->
+   <select id="pagelist" resultType="vo.ProductVo"
+      parameterType="java.util.Map">
+     SELECT * FROM
+     (SELECT rownum r, f.* FROM
+       (SELECT * FROM product WHERE pcategory = #{pcategory} ORDER BY pno) f
+        )
+      WHERE r BETWEEN #{start} AND #{end}
+   </select>
+   
+   <!-- 네비검색을 위한 쿼리문 -->
+   <select id="navlist" resultType="vo.ProductVo"
+      parameterType="java.util.Map">
+      SELECT * FROM
+      (SELECT rownum r, f.* FROM
+      (SELECT * FROM product WHERE
+      pcategory = #{pcategory} AND address=#{address} AND subaddress=#{subaddress} 
+      ORDER BY pno) f
+      ) WHERE r BETWEEN #{start} AND #{end}
+   </select>
+   <select id="search" parameterType="string" resultType="vo.ProductVo">
+      SELECT * FROM
+         (SELECT rownum r, p.*from
+            (SELECT * FROM PRODUCT
+            WHERE PNAME LIKE '%' || #{key} || '%') p)
+      WHERE r BETWEEN 1 AND 10
+   </select>
+   
+   <!-- 네비카테고리 반복을 위한 쿼리문 -->
+   <select id="navadd" parameterType="String" resultType="vo.ProductVo">
+   	select * from product where pcategory = #{pcategory} and address = #{address}
+   </select>
+   <select id="addrlist" parameterType="String" resultType="String">
+   	select distinct address from product
+   	where pcategory = #{pcategory}
+   </select>
+   <select id="subaddrlist" resultType="String" parameterType="java.util.Map">
+   	select distinct subaddress from product where address = #{address}
+   	and pcategory = #{pcategory}
+   </select>
+   
+   <!-- 숙소등록 -->
+   <insert id="productInsert" parameterType="vo.ProductVo">
+   <selectKey resultType="int" keyProperty="pno" order="AFTER">
+         select product_seq.currval from dual 
+   </selectKey>
+         INSERT INTO TRIP.PRODUCT
+         (PNO, PNAME, PRICE, PHOTOFILE, ROOMCNT, ADDRESS, SUBADDRESS, DETAILADD, PCATEGORY)
+      VALUES(product_seq.nextval, #{pname}, #{price}, #{photofile}, #{roomcnt}, #{address}, #{subaddress}, #{detailadd}, #{pcategory})
+         
+   </insert>
+   <delete id="delete" parameterType="int">
+         DELETE FROM product WHERE pno = #{pno}
+   </delete>
+</mapper>

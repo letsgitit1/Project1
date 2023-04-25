@@ -1,0 +1,142 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#likes_main{
+	font-family: 'Nanum Gothic', sans-serif;
+}
+html{
+	width:100%; height:100%;
+	font-size:15px;
+}
+body{
+	width:100%; height:100%; overflow:auto;
+	margin:0;
+}
+header{
+	position:sticky; top:0; left:0;
+	width:100%;
+	border-bottom: 0.1rem solid #e6e6e6;
+	background-color: #fff;
+}
+header > .top{
+	display: flex; justify-content:space-between;
+}
+.container{
+	max-width: 76.8rem;
+	margin:0 auto;
+}
+.likes_header_back{
+	flex:0 0 44px;
+	height:44px;
+	background:url("../img/btn-back.svg") no-repeat center;
+}
+.likes_header_back > button{
+	width:100%; height:100%;
+	padding:0;
+	border:0; background-color: transparent;
+}
+
+.likes_header_main img{
+	height:44px;
+}
+.likes_header_text {
+	display:none;
+}
+
+.likes_header_icon{
+	width:44px; height: 44px;
+}
+.likes_header_icon.cart{
+	background: url("../img/cart.svg") no-repeat center;
+}
+
+.likes_title{
+	font-size:25px;
+	padding:10px 20px;
+	margin:0;
+}
+
+.likes_list_wrap{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+}
+.likes_item_wrap{
+	display: flex; gap:10px;
+	flex:0 0 50%; min-width:373px;
+	padding:20px 17px; box-sizing: border-box;
+}
+.likes_item_img{
+	flex:1; max-width: 140px;
+	position:relative;
+	max-width:140px;
+	height:168px;
+	overflow: hidden;
+	border-radius:0.5rem;
+}
+.likes_item_img > img{
+	height:180px;
+	position:absolute; top:50%; left:50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.likes_item_info{
+	display: flex; flex-direction: column; justify-content: space-between;
+	flex:1;
+
+}
+.likes_item_info .star{
+	display: inline-block;
+	width:61px; height:12px;
+	background: url('../img/star.svg') repeat;
+}
+.likes_item_info .star .active{
+	display: block; height:13px;
+	background: url(../img/star_active.svg) repeat;
+}
+.likes_item_info .txt{
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+.likes_item_info .txt.bold{
+	font-weight: 700;
+}
+.likes_item_info .txt.big{
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+.likes_item_title{
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+.likes_item_info_bottom{
+	display: block;
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

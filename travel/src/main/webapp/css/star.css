@@ -1,0 +1,35 @@
+/* component */
+
+.star-rating {
+    flex-direction: row-reverse;
+    font-size: 1.5em;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    display: flex;
+    width: 7em;
+    float: right;
+}
+
+.star-rating input {
+ 	display:none;
+}
+
+.star-rating label {
+	width: 30px;
+ 	cursor:pointer;
+}
+.star img {
+	width: 30px;
+}
+.star-rating :checked ~ label {
+ 	color:#f90;
+	width: 30px;
+ 	content: url(../img/star.png);
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label img{
+	width: 30px;
+	content: url(../img/star.png);
+}

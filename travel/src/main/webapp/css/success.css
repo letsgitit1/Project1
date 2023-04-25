@@ -1,0 +1,119 @@
+@charset "UTF-8";
+.success_container{
+	width: 1400px;
+    margin: 30px auto;
+    text-align: center;
+    height: 100%;
+   font-family: 'Gothic A1', sans-serif;
+}
+.success_title{
+	   color: #fff;
+    transform: translateY(100px);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#success_header {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    margin-top: 90px;
+    background-image: url(../img/successImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#success_header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   background-color: #6c6c6c80; /* Change the opacity value (0.5) as needed */
+}
+#success_container_header{
+	    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    text-align: left;
+        background-color: #c9c9c91c;
+}
+#success_container_textArea{
+	margin-top:35px;
+	display: flex;
+    justify-content: space-evenly;
+}
+.container_header_text{
+	font-size: 20px;
+}
+.container_header_text:first-child{
+   
+}
+
+.container_header_text:nth-child(2){
+	padding: 0px 153px;
+}
+.success_container>td>span{
+	font-size:20px;
+}
+.success_container p,span{
+	font-size:20px;
+}
+.success_table {
+  margin-top: 40px;
+  border-collapse: collapse;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+        width: 1400px;
+}
+
+.success_table th {
+  font-size: 20px;
+  padding: 12px 50px;
+  border-right: 1px solid #9d9d9d;
+  text-align: center;
+}
+
+.success_table th:first-child {
+  padding-left: 25px;
+  padding-right: 120px;
+  border-right: none;
+   border-left: 1px solid #9d9d9d;
+}
+
+.success_table td {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #9d9d9d;
+}
+
+.success_table img {
+  max-width: 100%;
+  height: 200px;
+}
+#bottom_button_t{
+	margin-top:50px;
+}
+.Shome_button{
+	width: 100px;
+    height: 50px;
+    margin: 0px 100px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 25px;
+}
+.Shome_button:hover{
+	background-color:#3c9ac2d9;
+	color:#fff;
+}
+footer{
+	    margin-top: 100px !important;
+}
+.ttst>p{
+	    font-weight: bold;
+    color: #b3b3b3d6;
+}
